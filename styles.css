@@ -1,11 +1,91 @@
+/* Fondo oscuro estilo TRON */
 body {
-    font-family: Arial, sans-serif;
-    background: #0d1117;
-    color: #c9d1d9;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    background: #000;
+    color: #0ff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Contenedor central */
+.container {
     text-align: center;
-    padding-top: 100px;
+    border: 2px solid #0ff;
+    padding: 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 40px #0ff, 0 0 80px #0ff, 0 0 120px #0ff;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+    from {
+        box-shadow: 0 0 20px #0ff, 0 0 40px #0ff, 0 0 60px #0ff;
+    }
+
+    to {
+        box-shadow: 0 0 40px #0ff, 0 0 80px #0ff, 0 0 120px #0ff;
+    }
 }
 
 h1 {
-    color: #58a6ff;
+    font-size: 3em;
+    margin: 0 0 20px 0;
+    color: #0ff;
+    text-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+p {
+    font-size: 1.5em;
+    color: #0ff;
+    text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+}
+
+/* Efecto de líneas futuristas tipo TRON */
+.lines {
+    position: absolute;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(to bottom, #0ff, transparent);
+    animation: move 3s linear infinite;
+}
+
+@keyframes move {
+    0% {
+        top: -100%;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+
+/* Generar varias líneas con delay */
+.lines:nth-child(1) {
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.lines:nth-child(2) {
+    left: 30%;
+    animation-delay: 1s;
+}
+
+.lines:nth-child(3) {
+    left: 50%;
+    animation-delay: 2s;
+}
+
+.lines:nth-child(4) {
+    left: 70%;
+    animation-delay: 1.5s;
+}
+
+.lines:nth-child(5) {
+    left: 90%;
+    animation-delay: 0.5s;
 }
